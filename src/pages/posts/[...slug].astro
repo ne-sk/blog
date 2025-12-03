@@ -1,0 +1,26 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getEntry, render } from "astro:content";
+
+const { slug } = Astro.params;
+
+if (slug === undefined) {
+  throw new Error("Slug is required");
+}
+
+const entry = await getEntry("posts", slug);
+
+if (entry === undefined) {
+  return Astro.redirect("/404");
+}
+
+const { Content } = await render(entry);
+
+console.log(entry);
+---
+
+<MainLayout title={entry.data.title}>
+  <article>
+    {(<Content />)}
+  </article>
+</MainLayout>
