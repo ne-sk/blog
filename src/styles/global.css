@@ -1,6 +1,65 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-text: #dfdfdf;
-  --color-background: #292929;
+  --color-background: #080808;
+  --color-accent: oklch(76.9% 0.188 70.08);
+  --color-darker-accent: oklch(27.9% 0.077 45.635);
+}
+
+nav {
+  font-family: "EB Garamond", sans-serif;
+  font-size: 24px;
+}
+
+nav>div>a {
+  text-decoration-thickness: 4px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-color: oklch(76.9% 0.188 70.08);
+  /* text-decoration-thickness: 2px; */
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+table {
+  table-layout: auto;
+  border-collapse: collapse;
+  border-spacing: 2px;
+  caption-side: bottom;
+  margin: 0 auto;
+}
+
+
+caption {
+  margin-block: 1rlh;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+td,
+th {
+  padding: 0.2rem;
+  border: none;
+  border-bottom: 1px solid var(--color-accent);
+  padding-left: 0;
+  padding-right: 42px;
+  /* Adjust this value for more/less spacing */
+  text-align: left;
 }

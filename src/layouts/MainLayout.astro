@@ -4,18 +4,30 @@ import "../styles/global.css";
 const { title } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="w-full">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | elvisnipah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-background text-text">
-    <nav class="p-4">
+  <body class="bg-background text-text flex flex-col items-center">
+    <nav class="p-4 w-full top-0 overflow-hidden sticky bg-background">
       <div class="font-bold italic"><a href="/">elvisnipah.com</a></div>
     </nav>
-    <section class="flex flex-col items-center">
+    <section
+      class="flex flex-col items-center justify-center max-w-[780px] p-4"
+    >
       <slot />
     </section>
   </body>
