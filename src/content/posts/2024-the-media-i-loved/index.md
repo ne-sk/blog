@@ -47,7 +47,7 @@ Joker movie, let’s be real).
 You should probably see <cite>Blade Runner (1982)</cite> before this one, but this movie
 stands on its own so well that you could choose not to, with Ryan Gosling
 absolutely killing it in this role. It also happens to have
-<a href="https://youtu.be/pfrgOB_p1Y?si=iC9glDbZf8abZ3S5" target="_blank">
+<a href="https://youtu.be/PBVB5MS9qYA" target="_blank">
   one of my favorite scenes in movie history.
 </a>
 
