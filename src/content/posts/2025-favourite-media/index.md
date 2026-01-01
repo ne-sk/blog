@@ -6,7 +6,7 @@ tags: ['books', 'shows', 'music', 'youtube']
 slug: "2025-favourite-media"
 ---
 
-# 2025-media
+# 2025 - Favourite Media
 
 I like to make these recaps for media I have enjoyed throughout the year, because it kinda gives me perspective on how long the year really was. With books that I can barely remember reading at the start of the year, and shows and movies I could not tell you the plot of even if my life depended on it.
 
