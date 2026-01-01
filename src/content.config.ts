@@ -7,8 +7,9 @@ const posts = defineCollection({
     title: z.string(),
     pubDate: z.date(),
     tags: z.array(z.string()),
-    slug: z.string()
-  })
-})
+    slug: z.string(),
+    description: z.string(),
+  }),
+});
 
-export const collections = { posts }
+export const collections = { posts };

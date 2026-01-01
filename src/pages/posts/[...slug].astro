@@ -8,8 +8,6 @@ if (slug === undefined) {
   throw new Error("Slug is required");
 }
 
-console.log(slug);
-
 const entry = await getEntry("posts", slug);
 
 if (entry === undefined) {
@@ -21,9 +19,9 @@ const { Content } = await render(entry);
 console.log(entry);
 ---
 
-<MainLayout title={entry.data.title}>
+<MainLayout title={entry.data.title} description={entry.data.description}>
   <article
-    class="prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-headings:py-4 prose-p:py-2 prose-p:leading-6 prose-img:w-auto prose-img:pb-4 prose-img:mx-auto prose-img:max-h-[700px]"
+    class="prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-headings:py-4 prose-p:py-2 prose-p:leading-6 prose-img:w-auto prose-img:pb-4 prose-img:mx-auto prose-img:max-h-[700px] prose-ul:list-disc prose-ul:list-inside prose-ul:marker:text-accent"
   >
     {(<Content />)}
   </article>
