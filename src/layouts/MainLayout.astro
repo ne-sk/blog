@@ -32,4 +32,13 @@ const { title, description } = Astro.props;
       <slot />
     </section>
   </body>
+  <!-- open a tags in a new tab if the link is external -->
+  <script>
+    document.querySelectorAll("a").forEach((a) => {
+      if (a.hostname !== window.location.hostname) {
+        a.setAttribute("target", "_blank");
+        a.setAttribute("rel", "noopener noreferrer");
+      }
+    });
+  </script>
 </html>
