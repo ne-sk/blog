@@ -8,6 +8,11 @@ const allPosts: CollectionEntry<"posts">[] = await getCollection("posts");
 
 <MainLayout title="Home">
 <div class="flex flex-col">
-    {allPosts.sort((a, b) => +b.data.pubDate - +a.data.pubDate).map((post) => <div><a href=`/posts/${post.data.slug}`>{post.data.title}</a></div>)}
+    {allPosts.sort((a, b) => +b.data.pubDate - +a.data.pubDate).map((post) => 
+      <div class="mb-2">
+        <p class="text-sm italic opacity-50">{post.data.pubDate.toISOString().split('T')[0]}</p>
+        <a href=`/posts/${post.data.slug}`>{post.data.title}</a>
+      </div>
+    )}
 </div>
 </MainLayout>
